@@ -1,0 +1,27 @@
+// ваш код
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    min-height: 106px;
+  }
+
+  &__logo {
+    margin-right: auto;
+  }
+
+  &__nav {
+    margin-right: 145px;
+  }
+
+  &__buttons {
+  }
+}

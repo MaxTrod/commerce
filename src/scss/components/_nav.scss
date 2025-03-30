@@ -1,0 +1,27 @@
+.nav {
+  &__list {
+    display: flex;
+    column-gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    &--menu {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      svg {
+        width: 8px;
+        height: 4px;
+        fill: var(--digital-green-color);
+      }
+    }
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--main-color);
+  }
+}

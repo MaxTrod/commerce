@@ -1,0 +1,120 @@
+.hero {
+  // padding-top: 210px;
+  // min-height: 800px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    min-height: 760px;
+  }
+
+  &__title {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding-top: 100px;
+    padding-right: 45px;
+    padding-left: 52px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+  }
+
+  &__rating {
+    object-fit: contain;
+  }
+
+  &__text {
+    margin: 0;
+    margin-right: 252px;
+    margin-left: auto;
+    max-width: 292px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--main-color);
+  }
+}
+
+.title-hero {
+  // display: grid;
+  // align-items: center;
+  // justify-content: start;
+  // grid-template-columns: repeat(2, auto);
+
+  &__text {
+    // align-self: start;
+    // grid-column: 2 span;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-weight: 700;
+    font-size: 160px;
+    line-height: 85%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: var(--main-color);
+    gap: 12px;
+
+    // line-height: 100%;
+
+    &--gear {
+      // position: relative;
+
+      // &::after {
+      //   content: '';
+      //   position: absolute;
+      //   right: 0;
+      //   top: 50%;
+      //   width: 128px;
+      //   height: 117px;
+      //   background: url('../img/gear.png') 0 0 / cover no-repeat;
+      //   transform: translateY(-50%);
+      // }
+    }
+
+    &--accent {
+      // position: relative;
+      padding-left: 164px;
+      color: var(--digital-green-color);
+
+      // &::after {
+      //   content: '';
+      //   position: absolute;
+      //   left: 0;
+      //   top: 50%;
+      //   width: 161px;
+      //   height: 116px;
+      //   background: url('../img/switch.png') 0 0 / cover no-repeat;
+      //   transform: translateY(-50%);
+      // }
+    }
+
+    &--btn {
+      display: flex;
+      align-items: center;
+      padding-left: 65px;
+
+      // grid-column: 1 span;
+    }
+  }
+
+  &__btn {
+    padding: 46px 65px;
+
+    // width: 347px;
+    // height: 116px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: var(--black-color);
+  }
+}
