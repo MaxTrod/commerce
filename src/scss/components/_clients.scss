@@ -1,0 +1,26 @@
+.clients {
+  padding: 120px 0;
+
+  &__container {
+    margin: 0 auto;
+    max-width: 1440px;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    // justify-content: space-between;
+    gap: 16px;
+  }
+
+  &__item {
+    display: flex;
+    flex: 0 0 192px;
+    align-items: center;
+    justify-content: center;
+    height: 78px;
+  }
+}

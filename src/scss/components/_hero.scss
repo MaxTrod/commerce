@@ -105,6 +105,11 @@
     }
   }
 
+  &__anim {
+    display: flex;
+    align-items: center;
+  }
+
   &__btn {
     padding: 46px 65px;
 
@@ -116,5 +121,10 @@
     letter-spacing: 0;
     text-transform: uppercase;
     color: var(--black-color);
+    transition: transform 0.3s;
+
+    @include hover {
+      transform: scale(1.1);
+    }
   }
 }

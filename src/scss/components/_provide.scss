@@ -1,0 +1,147 @@
+.provide {
+  padding-top: 108px;
+  padding-bottom: 108px;
+
+  &__container {
+    text-align: center;
+  }
+
+  &__subtitle {
+    display: block;
+    font-size: 16px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: var(--main-color);
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+  }
+
+  // &__title {
+  //   margin: 0;
+  //   font-weight: 700;
+  //   font-size: 96px;
+  //   line-height: 90%;
+  //   letter-spacing: -0.02em;
+  //   text-align: center;
+  //   text-transform: uppercase;
+  //   color: var(--main-color);
+  // }
+
+}
+
+.provide-block {
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 90%;
+    letter-spacing: -0.02em;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--main-color);
+  }
+
+  &__text {
+    position: relative;
+    display: inline-block;
+  }
+
+  &__bubble {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding: 12px 18px;
+    transition:
+      transform 0.3s,
+      gap 0.3s
+    ;
+    cursor: pointer;
+    gap: 4px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: none;
+      stroke: var(--black-color);
+    }
+
+    &--dream {
+      right: -3%;
+      top: -23%;
+
+      @include hover {
+        transform: scale(1.2);
+      }
+    }
+
+    &--build {
+      left: 5%;
+      top: -36%;
+
+      @include hover {
+        gap: 20px;
+      }
+    }
+
+    &--grow {
+      left: 20%;
+      bottom: -24%;
+
+      @include hover {
+        transform: scale(1.2) translate(10px, -10px);
+      }
+    }
+  }
+
+  &__bubble-text {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: var(--black-color);
+  }
+}
+
+.bubble-provide {
+  // position: absolute;
+  // display: inline-flex;
+  // align-items: center;
+  // padding: 12px 18px 12px 15px;
+  // cursor: pointer;
+  // gap: 4px;
+
+  // &--dream {
+  //   right: 22%;
+  //   top: -8%;
+  // }
+
+  // &--build {
+  //   left: 11%;
+  //   top: 21%;
+  // }
+
+  // &--grow {
+  //   left: 29%;
+  //   bottom: -9%;
+  // }
+
+  // svg {
+  //   width: 20px;
+  //   height: 20px;
+  //   fill: none;
+  //   stroke: var(--black-color);
+  // }
+
+  // &__text {
+  //   font-weight: 700;
+  //   font-size: 16px;
+  //   line-height: 120%;
+  //   letter-spacing: 0;
+  //   text-transform: uppercase;
+  //   color: var(--black-color);
+  // }
+}
