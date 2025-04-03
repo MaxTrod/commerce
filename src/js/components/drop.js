@@ -1,7 +1,6 @@
 const subMenu = document.querySelectorAll('.nav__item--submenu');
 subMenu.forEach(sub => {
   const navLink = sub.querySelector('.nav__link');
-  console.log(navLink);
 
   navLink.addEventListener('focus', (e) => {
     sub.classList.add('open');
