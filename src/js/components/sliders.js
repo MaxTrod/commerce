@@ -3,32 +3,6 @@ import { Navigation, Pagination, EffectCoverflow } from 'swiper/modules';
 // import { cursor } from './cursor.js';
 
 
-function cursor() {
-  // const cursorElem = document.querySelector('[data-cursor]');
-  // const sliderActive = document.querySelector('.case__slide.swiper-slide-active');
-  // const imgBlock = sliderActive.querySelector('.case-item__image-block');
-  // console.log(imgBlock);
-
-  // imgBlock.addEventListener("mousemove", function (e) {
-  //   const posX = e.clientX;
-  //   const posY = e.clientY;
-  //   cursorElem.style.left = `${posX}px`;
-  //   cursorElem.style.top = `${posY}px`;
-  // })
-  // imgBlock.addEventListener("mouseenter", function (e) {
-  //   cursorElem.style.opacity = `1`;
-  //   cursorElem.style.visibility = `visible`;
-  //   cursorElem.style.pointerEvents = `auto`;
-  // })
-  // imgBlock.addEventListener("mouseleave", function (e) {
-  //   cursorElem.style.opacity = `0`;
-  //   cursorElem.style.visibility = `hidden`;
-  //   cursorElem.style.pointerEvents = `none`;
-  // })
-}
-
-
-
 const caseSlider = new Swiper('.case__slider', {
   modules: [Navigation, Pagination, EffectCoverflow],
   observer: true,
@@ -36,85 +10,79 @@ const caseSlider = new Swiper('.case__slider', {
   slidesPerView: 1,
   // autoHeight: true,
   spaceBetween: 60,
+  allowTouchMove: false,
   // loop: true,
   // centered: true
   // centeredSlides: true
+  navigation: {
+    nextEl: '.case__next',
+    prevEl: '.case__prev',
+  },
   on: {
     init: function () {
+    const cursorElem = document.querySelector('[data-cursor]');
+    const imgBlock = document.querySelector('.case-item__image-block');
+    const btnNext = document.querySelector('.case__next');
+    const btnPrev = document.querySelector('.case__prev');
 
-      // cursor();
-      // const cursorElem = document.querySelector('[data-cursor]');
-      // const sliderActive = document.querySelector('.case__slide.swiper-slide-active');
-      // const imgBlock = sliderActive.querySelector('.case-item__image-block');
-      // console.log(imgBlock);
 
-      // imgBlock.addEventListener("mousemove", function (e) {
-      //   const posX = e.clientX;
-      //   const posY = e.clientY;
-      //   cursorElem.style.left = `${posX}px`;
-      //   cursorElem.style.top = `${posY}px`;
-      // })
-      // imgBlock.addEventListener("mouseenter", function (e) {
-      //   cursorElem.style.opacity = `1`;
-      //   cursorElem.style.visibility = `visible`;
-      //   cursorElem.style.pointerEvents = `auto`;
-      // })
-      // imgBlock.addEventListener("mouseleave", function (e) {
-      //   cursorElem.style.opacity = `0`;
-      //   cursorElem.style.visibility = `hidden`;
-      //   cursorElem.style.pointerEvents = `none`;
-      // })
-        const cursorElem = document.querySelector('[data-cursor]');
-  const imgBlock = document.querySelector('.case-item__image-block');
-  console.log(imgBlock);
+    imgBlock.addEventListener("mousemove", function (e) {
+      const posX = e.clientX;
+      const posY = e.clientY;
+      // cursorElem.style.left = `${posX}px`;
+      // cursorElem.style.top = `${posY}px`;
+      cursorElem.style.left = `calc(${posX}px - 59px)`;
+      cursorElem.style.top = `calc(${posY}px - 59px)`;
+    })
+    imgBlock.addEventListener("mouseenter", function (e) {
+      cursorElem.style.opacity = `1`;
+      cursorElem.style.visibility = `visible`;
+    })
+    imgBlock.addEventListener("mouseleave", function (e) {
+      cursorElem.style.opacity = `0`;
+      cursorElem.style.visibility = `hidden`;
+    })
 
-  imgBlock.addEventListener("mousemove", function (e) {
-    const posX = e.clientX;
-    const posY = e.clientY;
-    cursorElem.style.left = `${posX}px`;
-    cursorElem.style.top = `${posY}px`;
-  })
-  imgBlock.addEventListener("mouseenter", function (e) {
-    cursorElem.style.opacity = `1`;
-    cursorElem.style.visibility = `visible`;
-    cursorElem.style.pointerEvents = `auto`;
-  })
-  imgBlock.addEventListener("mouseleave", function (e) {
-    cursorElem.style.opacity = `0`;
-    cursorElem.style.visibility = `hidden`;
-    cursorElem.style.pointerEvents = `none`;
-  })
+    btnNext.addEventListener("mousemove", function (e) {
+      const posX = e.clientX;
+      const posY = e.clientY;
+      // cursorElem.style.left = `${posX}px`;
+      // cursorElem.style.top = `${posY}px`;
+      cursorElem.style.left = `calc(${posX}px - 59px)`;
+      cursorElem.style.top = `calc(${posY}px - 59px)`;
+    })
+    btnNext.addEventListener("mouseenter", function (e) {
+      cursorElem.style.opacity = `1`;
+      cursorElem.style.visibility = `visible`;
+    })
+    btnNext.addEventListener("mouseleave", function (e) {
+      cursorElem.style.opacity = `0`;
+      cursorElem.style.visibility = `hidden`;
+    })
+
+    btnPrev.addEventListener("mousemove", function (e) {
+      const posX = e.clientX;
+      const posY = e.clientY;
+      // cursorElem.style.left = `${posX}px`;
+      // cursorElem.style.top = `${posY}px`;
+      cursorElem.style.left = `calc(${posX}px - 59px)`;
+      cursorElem.style.top = `calc(${posY}px - 59px)`;
+    })
+    btnPrev.addEventListener("mouseenter", function (e) {
+      cursorElem.style.opacity = `1`;
+      cursorElem.style.visibility = `visible`;
+      cursorElem.classList.add('rotate-arrow');
+    })
+    btnPrev.addEventListener("mouseleave", function (e) {
+      cursorElem.style.opacity = `0`;
+      cursorElem.style.visibility = `hidden`;
+      cursorElem.classList.remove('rotate-arrow');
+    })
 
     },
+
     slideChange: function () {
-      // caseSlider.update();
-      // caseSlider.updateSlides();
-      // caseSlider.updateSlidesClasses();
-      // cursor();
-
-      // const cursorElem = document.querySelector('[data-cursor]');
-      // const sliderActive = document.querySelector('.case__slide.swiper-slide-active');
-      // const imgBlock = sliderActive.querySelector('.case-item__image-block');
-      // console.log(imgBlock);
-
-      // imgBlock.addEventListener("mousemove", function (e) {
-      //   const posX = e.clientX;
-      //   const posY = e.clientY;
-      //   cursorElem.style.left = `${posX}px`;
-      //   cursorElem.style.top = `${posY}px`;
-      // })
-      // imgBlock.addEventListener("mouseenter", function (e) {
-      //   cursorElem.style.opacity = `1`;
-      //   cursorElem.style.visibility = `visible`;
-      //   cursorElem.style.pointerEvents = `auto`;
-      // })
-      // imgBlock.addEventListener("mouseleave", function (e) {
-      //   cursorElem.style.opacity = `0`;
-      //   cursorElem.style.visibility = `hidden`;
-      //   cursorElem.style.pointerEvents = `none`;
-      // })
     },
-    // realIndexChange: (caseSlider) => console.log(caseSlider.realIndex)
   }
 });
 
@@ -133,37 +101,30 @@ caseSlider.on('slideChange', function() {
     imgBlock.addEventListener("mouseenter", function (e) {
       cursorElem.style.opacity = `0`;
       cursorElem.style.visibility = `hidden`;
-      cursorElem.style.pointerEvents = `none`;
     })
   }
 
-  // const linkElemCurrentSlide = swiperSlides[s6.realIndex].getElementsByTagName('a')
-  // linkElemCurrentSlide[0].style.display = 'block'
   const imgBlockActive = swiperSlides[caseSlider.realIndex].querySelector('.case-item__image-block');
   const cursorElem = document.querySelector('[data-cursor]');
   imgBlockActive.addEventListener("mousemove", function (e) {
     const posX = e.clientX;
     const posY = e.clientY;
-    cursorElem.style.left = `${posX}px`;
-    cursorElem.style.top = `${posY}px`;
+    cursorElem.style.left = `calc(${posX}px - 59px)`;
+    cursorElem.style.top = `calc(${posY}px - 59px)`;
   })
   imgBlockActive.addEventListener("mouseenter", function (e) {
     cursorElem.style.opacity = `1`;
     cursorElem.style.visibility = `visible`;
-    cursorElem.style.pointerEvents = `auto`;
   })
   imgBlockActive.addEventListener("mouseleave", function (e) {
     cursorElem.style.opacity = `0`;
     cursorElem.style.visibility = `hidden`;
-    cursorElem.style.pointerEvents = `none`;
   })
 });
 
 
 
-// $('.swiper-slide a').on('click touchstart', function(e) {
-//  e.preventDefault();
-// });
+
 
 
 
