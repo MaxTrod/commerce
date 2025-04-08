@@ -12,16 +12,17 @@
     padding-top: 10px;
     padding-bottom: 10px;
     min-height: 106px;
+    gap: 30px;
   }
 
   &__logo {
+    flex: 1 0 auto;
     margin-right: auto;
   }
 
   &__nav {
     margin-right: 145px;
   }
-
-  &__buttons {
-  }
 }
+
+

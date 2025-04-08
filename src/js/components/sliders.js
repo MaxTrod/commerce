@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination, EffectCoverflow } from 'swiper/modules';
+import { Navigation, Pagination, A11y} from 'swiper/modules';
 
 function customCursor() {
   const cursor = document.querySelector('.case__cursor');
@@ -20,6 +20,7 @@ function customCursor() {
     const targetElement = e.target;
 
     if(targetElement.closest('.case__next')) {
+      console.log('я тут')
       const posX = e.clientX;
       const posY = e.clientY;
       cursor.style.left = `${posX}px`;
@@ -30,6 +31,7 @@ function customCursor() {
     }
 
     if(targetElement.closest('.case__prev')) {
+      console.log('я тут')
       const posX = e.clientX;
       const posY = e.clientY;
       cursor.style.left = `${posX}px`;
@@ -40,7 +42,6 @@ function customCursor() {
     }
 
     if(targetElement.closest('.case-item__view-link')) {
-      console.log('я тут')
       const viewLink = targetElement.closest('.case-item__view-link');
       const posX = e.clientX;
       const posY = e.clientY;
@@ -74,9 +75,8 @@ function customCursor() {
 
 }
 
-
 const caseSlider = new Swiper('.case__slider', {
-  modules: [Navigation, Pagination, EffectCoverflow],
+  modules: [ Navigation, Pagination, A11y ],
   observer: true,
   observeParents: true,
   slidesPerView: 1,
@@ -89,6 +89,15 @@ const caseSlider = new Swiper('.case__slider', {
   navigation: {
     nextEl: '.case__next',
     prevEl: '.case__prev',
+  },
+  pagination: {
+    el: ".case__pagination",
+    type: "fraction",
+    renderFraction: (currentClass, totalClass) => {
+			return '<span class="' + currentClass + '"></span>' +
+             '<span class="case__decor-pag"></span>' +
+						'<span class="' + totalClass + '"></span>'
+			}
   },
   on: {
     init: function () {

@@ -1,5 +1,5 @@
 .footer {
-  padding: 120px 0;
+  padding: 100px 0;
 
   &__container {
     text-align: center;
@@ -30,12 +30,9 @@
     align-items: flex-start;
     justify-content: center;
     color: var(--digital-green-color);
-    transition: gap 0.3s;
+    transition: gap 0.3s, color 0.3s;
     gap: 5px;
 
-    // text-decoration: underline;
-
-    // text-decoration-skip-ink: none;
     svg {
       width: 15px;
       height: 15px;
@@ -58,6 +55,8 @@
       transition: width 0.3s;
     }
 
+    @include focus-visible;
+
     @include hover {
       gap: 0;
 
@@ -68,6 +67,14 @@
 
       &::after {
         width: 100%;
+      }
+    }
+
+    &:active {
+      color: var(--decor-color);
+      
+      &::after {
+        width: 0;
       }
     }
   }

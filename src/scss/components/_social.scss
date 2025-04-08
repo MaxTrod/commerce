@@ -16,5 +16,18 @@
     line-height: 100%;
     text-transform: uppercase;
     color: var(--main-color);
+    background-color: transparent;
+    transition: background-color 0.3s;
+
+    @include focus-visible;
+
+    @include hover {
+      background-color: var(--decor-color);
+    }
+
+    &:active {
+      background-color: var(--digital-green-color);
+    }
+
   }
 }
