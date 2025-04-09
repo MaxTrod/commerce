@@ -13,6 +13,14 @@
 
   &:not(:first-child) {
     margin-top: -100px;
+
+    @include big-desktop {
+      margin-top: -80px;
+    }
+
+    @include tablet {
+      margin-top: -55px;
+    }
   }
 
   &__number {
@@ -27,6 +35,14 @@
     background: linear-gradient(180deg, #00e56d 15.17%, rgba(0, 229, 109, 0) 100%);
     -webkit-background-clip: text;
     background-clip: text;
+
+    @include big-desktop {
+      font-size: 180px;
+    }
+
+    @include tablet {
+      font-size: 130px;
+    }
   }
 
   &__text {
@@ -35,5 +51,9 @@
     font-size: 40px;
     line-height: 100%;
     color: var(--main-color);
+
+    @include tablet {
+      font-size: 25px;
+    }
   }
 }

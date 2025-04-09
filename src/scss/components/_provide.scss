@@ -1,6 +1,9 @@
 .provide {
-  padding-top: 108px;
-  padding-bottom: 108px;
+  padding: 108px 0;
+
+  @include tablet {
+    padding: 80px 0;
+  }
 
   &__container {
     text-align: center;
@@ -31,6 +34,14 @@
     text-align: center;
     text-transform: uppercase;
     color: var(--main-color);
+
+    @include big-desktop {
+      font-size: 72px;
+    }
+
+    @include tablet {
+      font-size: 52px;
+    }
   }
 
   &__text {
@@ -84,6 +95,36 @@
         transform: scale(1.2) translate(10px, -10px);
       }
     }
+
+    @include big-desktop {
+      &--dream {
+        top: -40%;
+      }
+
+      &--build {
+        top: -42%;
+      }
+
+      &--grow {
+        bottom: -35%;
+      }
+    }
+
+    @include tablet {
+      padding: 8px 10px;
+
+      &--dream {
+        top: -50%;
+      }
+
+      &--build {
+        top: -45%;
+      }
+
+      &--grow {
+        bottom: -40%;
+      }
+    }
   }
 
   &__bubble-text {
@@ -93,6 +134,10 @@
     letter-spacing: 0;
     text-transform: uppercase;
     color: var(--black-color);
+
+    @include tablet {
+      font-size: 14px;
+    }
   }
 }
 

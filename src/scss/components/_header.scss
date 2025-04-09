@@ -13,15 +13,39 @@
     padding-bottom: 10px;
     min-height: 106px;
     gap: 30px;
+
+    @include tablet {
+      min-height: 70px;
+    }
   }
 
   &__logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 6;
     flex: 1 0 auto;
     margin-right: auto;
   }
 
   &__nav {
     margin-right: 145px;
+
+    @include tablet {
+      margin-right: 0;
+    }
+  }
+
+  &__buttons {
+    position: relative;
+    z-index: 6;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    @include small-tablet {
+      gap: 20px;
+    }
   }
 }
 

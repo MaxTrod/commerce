@@ -138,13 +138,28 @@
 
     &:active {
       color: var(--decor-color);
-      
+
       &::after {
         width: 0;
       }
     }
 
 
+  }
+
+  @include tablet {
+    position: fixed;
+    width: 100%;
+    height: 100svh;
+    top: 0;
+    left: -120%;
+    z-index: 5;
+    background-color: var(--black-color);
+    transition: left 0.3s;
+
+    &.menu--active {
+      left: 0;
+    }
   }
 }
 

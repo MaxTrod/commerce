@@ -79,10 +79,9 @@ const caseSlider = new Swiper('.case__slider', {
   modules: [ Navigation, Pagination, A11y ],
   observer: true,
   observeParents: true,
-  slidesPerView: 1,
-  // autoHeight: true,
-  spaceBetween: 60,
-  allowTouchMove: false,
+  slidesPerView: 1.1,
+  spaceBetween: 20,
+  allowTouchMove: true,
   // loop: true,
   // centered: true
   // centeredSlides: true
@@ -114,6 +113,19 @@ const caseSlider = new Swiper('.case__slider', {
         const viewLinkActive = swiperSlides[caseSlider.realIndex].querySelector('.case-item__view-link');
         viewLinkActive.style.pointerEvents = `auto`;
     },
+  },
+  breakpoints: {
+    767.98: {
+      spaceBetween: 60,
+      slidesPerView: 1,
+      allowTouchMove: true,
+    },
+    1024.98: {
+      spaceBetween: 60,
+      allowTouchMove: false,
+      slidesPerView: 1,
+    }
+
   }
 });
 
