@@ -20,11 +20,11 @@
   }
 
   &__logo {
-    display: flex;
-    align-items: center;
     position: relative;
     z-index: 6;
+    display: flex;
     flex: 1 0 auto;
+    align-items: center;
     margin-right: auto;
   }
 

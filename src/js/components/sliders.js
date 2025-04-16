@@ -82,9 +82,6 @@ const caseSlider = new Swiper('.case__slider', {
   slidesPerView: 1.1,
   spaceBetween: 20,
   allowTouchMove: true,
-  // loop: true,
-  // centered: true
-  // centeredSlides: true
   navigation: {
     nextEl: '.case__next',
     prevEl: '.case__prev',
@@ -93,10 +90,10 @@ const caseSlider = new Swiper('.case__slider', {
     el: ".case__pagination",
     type: "fraction",
     renderFraction: (currentClass, totalClass) => {
-			return '<span class="' + currentClass + '"></span>' +
-             '<span class="case__decor-pag"></span>' +
-						'<span class="' + totalClass + '"></span>'
-			}
+      return '<span class="' + currentClass + '"></span>' +
+        '<span class="case__decor-pag"></span>' +
+        '<span class="' + totalClass + '"></span>'
+      }
   },
   on: {
     init: function () {

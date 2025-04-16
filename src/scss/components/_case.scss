@@ -127,12 +127,6 @@
 
     @include tablet {
       flex: 0 1 650px;
-      // overflow: hidden;
-      // flex: 0 1 90%;
-    }
-
-    @include small-tablet {
-
     }
 
     .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
@@ -192,7 +186,6 @@
 
       .case-item__image-block {
         width: 100%;
-        // width: 1130px;
         height: 100%;
 
         @include small-tablet {
@@ -211,7 +204,6 @@
 
         @include tablet {
           transform: translate(10%, 0);
-          // align-self: flex-end;
         }
 
         @include small-tablet {
@@ -231,7 +223,6 @@
 
         @include tablet {
           transform: translate(-10%, 0);
-          // align-self: flex-start;
         }
 
         @include small-tablet {
@@ -258,12 +249,6 @@
     @include small-tablet {
       height: auto;
     }
-
-    // @include small-tablet {
-    //   height: 450px;
-    // }
-
-
   }
 
   &__article {

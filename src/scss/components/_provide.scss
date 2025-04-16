@@ -5,6 +5,10 @@
     padding: 80px 0;
   }
 
+  @include small-tablet {
+    padding: 40px 0;
+  }
+
   &__container {
     text-align: center;
   }
@@ -19,6 +23,10 @@
     &:not(:last-child) {
       margin-bottom: 20px;
       font-weight: 600;
+    }
+
+    @include small-tablet {
+      font-size: 14px;
     }
   }
 
@@ -42,11 +50,26 @@
     @include tablet {
       font-size: 52px;
     }
+
+    @include small-tablet {
+      font-size: 42px;
+    }
+
+    @include mobile {
+      font-size: 32px;
+      line-height: 1;
+    }
   }
 
   &__text {
     position: relative;
     display: inline-block;
+  }
+
+  &__bubble-anim {
+    @include small-tablet {
+      display: none;
+    }
   }
 
   &__bubble {
@@ -82,8 +105,8 @@
       top: -36%;
 
       @include hover {
-        gap: 20px;
         transform: scale(1);
+        gap: 20px;
       }
     }
 
